@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\style.css">
+
+    <!-- JS -->
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script defer src="node_modules\@fortawesome\fontawesome-free\js\all.js"></script>
+    <script defer src="js\main.js"></script>
+
+    <title>Cinema APP</title>
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-3">
+                <h1 id="title">Cinema APP</h1>
+                Bem-vindo ao mundo espetacular do cinema.
+            </div>
+            <div id="buscargroup" class="pt-1">
+                <div class="input-group">
+                    <input id="busca" type="search" class="form-control rounded" placeholder="O que você busca..."
+                        aria-label="Search" aria-describedby="search-addon" />
+                    
+                </div>
+                <button type="button" class="btn btn-movie" onclick="Buscar();">Buscar</button>
+            </div>
+        </div>
+
+        <!-- Lista -->
+        <div id="lista" class="mt-5 mb-5">
+        </div>
+        <!-- END Lista -->
+        
+    </div>
+
+    <div class="footer navbar-fixed-bottom pt-1 pb-1">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col" onclick="AlternaListas(1);">
+                        <span id="buscarbottom" class="bottom-active"><i class="fa fa-search"></i> Buscar</span>
+                    </div>
+                    <div class="col" onclick="AlternaListas(0);">
+                        <span id="favoritos" class="bottom-inactive"><i class="fas fa-star"></i> Favoritos</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
